@@ -1,0 +1,27 @@
+http://localhost:5000/api/auth/register   -- POST
+
+{
+   "firstName": "John",
+   "email": "john@test.com",
+   "password": "1234567890"
+}
+
+
+{
+    "_id": "69c624359dcb2fbb7a9fc613",
+    "firstName": "John",
+    "email": "john@test.com",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzYyNDM1OWRjYjJmYmI3YTlmYzYxMyIsImlhdCI6MTc3NDU5MzA3OCwiZXhwIjoxNzc3MTg1MDc4fQ.HgO-xBRUYj6Rl7OQy7VFwr27So4klcW1HBKaByzLo8M"
+}
+
+http://localhost:5000/api/auth/login  -- POST
+
+{
+   "email": "john@test.com",
+   "password": "1234567890"
+}
+
+http://localhost:5000/api/auth/profile  -- GET
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzYyNDM1OWRjYjJmYmI3YTlmYzYxMyIsImlhdCI6MTc3NDU5MzA3OCwiZXhwIjoxNzc3MTg1MDc4fQ.HgO-xBRUYj6Rl7OQy7VFwr27So4klcW1HBKaByzLo8M      (Bearer Token)
+
