@@ -804,3 +804,63 @@
 .cart-footer-icon:hover {
   background: #f8f8f8;
 }
+
+.filter-sidebar{
+padding:20px;
+border-right:1px solid #eee;
+font-family:Arial, sans-serif;
+}
+
+.filter-section{
+margin-bottom:25px;
+}
+
+.filter-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+cursor:pointer;
+border-bottom:1px solid #eee;
+padding-bottom:10px;
+}
+
+.filter-header h6{
+font-weight:700;
+letter-spacing:1px;
+}
+
+.filter-content{
+margin-top:15px;
+}
+
+.form-check{
+margin-bottom:10px;
+}
+
+.form-check-label{
+font-size:14px;
+color:#333;
+}
+
+.show-more-btn{
+border:none;
+background:#eee;
+padding:6px 10px;
+font-size:13px;
+cursor:pointer;
+margin-top:10px;
+}
+
+.show-more-btn:hover{
+background:#ddd;
+}
+
+@media (max-width:768px){
+
+.filter-sidebar{
+border-right:none;
+border-bottom:1px solid #eee;
+margin-bottom:20px;
+}
+
+}
