@@ -11,9 +11,9 @@ exports.getProducts = async (req, res) => {
 
 exports.addProduct = async (req, res) => {
   try {
-    const { name, price, image } = req.body;
+    const { name, price, oldPrice, image, colors, badge } = req.body;
 
-    const product = new Product({ name, price, image });
+    const product = new Product({ name, price, oldPrice, image, colors, badge });
     await product.save();
 
     res.status(201).json(product);

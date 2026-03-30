@@ -3,11 +3,14 @@ import React, { useState, useContext } from "react";
 import "../Navbar.css";
 import logo from "../assets/logo-black.png";
 import SidebarLogin from "./SidebarLogin";
+import CartSidebar from "./CartSidebar";
 import { AuthContext } from "../context/AuthContext";
+import { ShopContext } from "../context/ShopContext";
 
 const Navbar = () => {
   const [megaOpen, setMegaOpen] = useState(false);
   const { user, logout } = useContext(AuthContext);
+  const { wishlistCount, cartCount, isCartOpen, setIsCartOpen } = useContext(ShopContext);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [profileDropdown, setProfileDropdown] = useState(false);
 
@@ -203,12 +206,35 @@ const Navbar = () => {
                     )}
                 </div>
               ) : (
-                <i className="far fa-user" onClick={() => setIsLoginOpen(true)} style={{ cursor: 'pointer' }}></i>
+                <i className="far fa-user" onClick={() => setIsLoginOpen(true)} style={{ cursor: 'pointer', fontSize: '20px' }}></i>
               )}
-              <i className="fas fa-search" style={{ cursor: 'pointer' }}></i>
-              <i className="fas fa-globe" style={{ cursor: 'pointer' }}></i>
-              <i className="far fa-heart" onClick={handleProtectedAction} style={{ cursor: 'pointer' }}></i>
-              <i className="fas fa-shopping-bag" onClick={handleProtectedAction} style={{ cursor: 'pointer' }}></i>
+              <i className="fas fa-search" style={{ cursor: 'pointer', fontSize: '20px' }}></i>
+              <i className="fas fa-globe" style={{ cursor: 'pointer', fontSize: '20px' }}></i>
+              
+              <div 
+                className="position-relative" 
+                onClick={() => {
+                  if(!user) { alert("please logged in first"); return; }
+                  window.location.href = "/wishlist";
+                }} 
+                style={{ cursor: 'pointer' }}
+              >
+                <i className="far fa-heart" style={{ fontSize: '20px' }}></i>
+                {wishlistCount > 0 && (
+                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style={{fontSize: '10px'}}>
+                    {wishlistCount}
+                  </span>
+                )}
+              </div>
+              
+              <div className="position-relative" onClick={() => setIsCartOpen(true)} style={{ cursor: 'pointer' }}>
+                <i className="fas fa-shopping-bag" style={{ fontSize: '20px' }}></i>
+                {cartCount > 0 && (
+                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style={{fontSize: '10px'}}>
+                    {cartCount}
+                  </span>
+                )}
+              </div>
 
             </div>
 
@@ -218,6 +244,7 @@ const Navbar = () => {
 
       </nav>
       <SidebarLogin isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
+      <CartSidebar isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 import "../Style.css";
 import heroImg from "../assets/herohome.png";
@@ -40,6 +41,24 @@ function Home() {
 
     const visibleProducts = products.slice(start, start + visibleCount);
 
+    const navigate = useNavigate();
+
+ const handleShopAll = async () => {
+
+   try {
+
+    const res = await axios.get("http://localhost:5000/api/shop/shop-all-products")
+
+    if(res.data.success){
+        navigate(res.data.redirectUrl);
+    }
+
+   } catch(error){
+    console.log(error);
+   }
+
+ };
+
     return (
         <>
             <section className="hero">
@@ -50,9 +69,10 @@ function Home() {
                         MODERN LIVES
                     </h1>
 
-                    <button className="hero-btn">
-                        SHOP ALL PRODUCTS
-                    </button>
+                     <button className="hero-btn btn btn-dark px-4 py-2" onClick={handleShopAll}>
+        <i className="fa-solid fa-bag-shopping me-2"></i>
+        SHOP ALL PRODUCTS
+     </button>
                 </div>
 
                 <div className="hero-img">
@@ -118,7 +138,6 @@ function Home() {
 
                 </div>
             </div>
-
         </>
     );
 }
