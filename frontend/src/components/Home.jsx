@@ -96,7 +96,6 @@ function Home() {
                     </h1>
 
                     <button className="hero-btn btn btn-dark px-4 py-2" onClick={handleShopAll}>
-                        <i className="fa-solid fa-bag-shopping me-2"></i>
                         SHOP ALL PRODUCTS
                     </button>
                 </div>
@@ -330,49 +329,49 @@ function Home() {
 
             <section className="brand-section">
 
-      <div className="brand-slider">
+                <div className="brand-slider">
 
-        <div className="brand-track">
+                    <div className="brand-track">
 
-          {/* first set */}
-          <div className="brand-item">
-            <img src={brand1} alt="" />
-          </div>
+                        {/* first set */}
+                        <div className="brand-item">
+                            <img src={brand1} alt="" />
+                        </div>
 
-          <div className="brand-item">
-            <img src={brand2} alt="" />
-          </div>
+                        <div className="brand-item">
+                            <img src={brand2} alt="" />
+                        </div>
 
-          <div className="brand-item">
-            <img src={brand3} alt="" />
-          </div>
+                        <div className="brand-item">
+                            <img src={brand3} alt="" />
+                        </div>
 
-          <div className="brand-item">
-            <img src={brand4} alt="" />
-          </div>
+                        <div className="brand-item">
+                            <img src={brand4} alt="" />
+                        </div>
 
 
-          <div className="brand-item">
-            <img src={brand1} alt="" />
-          </div>
+                        <div className="brand-item">
+                            <img src={brand1} alt="" />
+                        </div>
 
-          <div className="brand-item">
-            <img src={brand2} alt="" />
-          </div>
+                        <div className="brand-item">
+                            <img src={brand2} alt="" />
+                        </div>
 
-          <div className="brand-item">
-            <img src={brand3} alt="" />
-          </div>
+                        <div className="brand-item">
+                            <img src={brand3} alt="" />
+                        </div>
 
-          <div className="brand-item">
-            <img src={brand4} alt="" />
-          </div>
+                        <div className="brand-item">
+                            <img src={brand4} alt="" />
+                        </div>
 
-        </div>
+                    </div>
 
-      </div>
+                </div>
 
-    </section>
+            </section>
         </>
     );
 }
