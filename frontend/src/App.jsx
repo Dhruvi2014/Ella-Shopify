@@ -6,7 +6,7 @@ import Wishlist from "./pages/Wishlist";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { ShopProvider } from "./context/ShopContext";
-
+import Footer from "./components/Footer";
 function App() {
   return (
     <ShopProvider>
@@ -18,7 +18,10 @@ function App() {
             <Route path="/wishlist" element={<Wishlist />} />
         </Routes>
       </BrowserRouter>
+          <Footer/>
+
     </ShopProvider>
+
   );
 }
 

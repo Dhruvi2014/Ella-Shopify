@@ -5,12 +5,20 @@ import banner from "../assets/banner.webp";
 import model1 from "../assets/model1.png";
 import model2 from "../assets/model2.png";
 import model3 from "../assets/model3.png";
+import model4 from "../assets/model4.jpg";
+import model5 from "../assets/model5.jpg";
+
+import topBanner from "../assets/banner2.avif";
+import bottomBanner from "../assets/banner1.avif";
+
 import { ShopContext } from "../context/ShopContext";
 
 const imageMap = {
     model1,
     model2,
-    model3
+    model3,
+    model4,
+    model5
 };
 
 function ShopAll() {
@@ -117,7 +125,6 @@ function ShopAll() {
                             <label className="form-check-label" htmlFor="sweaters">Sweaters</label>
                         </div>
 
-
                         <div className="mt-5 filter-section">
 
                             <div
@@ -144,7 +151,6 @@ function ShopAll() {
                             )}
 
                         </div>
-
 
                         <div className="filter-section">
 
@@ -219,6 +225,34 @@ function ShopAll() {
                                 </div>
 
                             )}
+
+                        </div>
+
+                        <div className="custom-block container-fluid">
+
+                            <div className="top-banner">
+                                <img src={topBanner} alt="New Arrivals" className="img-fluid w-100" />
+
+                            </div>
+
+                            <div className="bottom-banner">
+                                <img src={bottomBanner} alt="Jumpsuits" className="img-fluid w-100" />
+
+                            </div>
+
+                            <div className="custom-text mt-4">
+                                <div className="d-flex justify-content-between align-items-center">
+                                    <h5 className="mb-0">CUSTOM BLOCK</h5>
+                                    <i className="fa fa-chevron-down"></i>
+                                </div>
+                                <hr />
+                                <p>
+                                    Custom CMS block displayed at the left sidebar on the Catalog Page.
+                                    Put your own content here: text, html, images, media... or whatever
+                                    you like. There are many similar sample content placeholders across
+                                    the store. All editable from admin panel.
+                                </p>
+                            </div>
 
                         </div>
 
