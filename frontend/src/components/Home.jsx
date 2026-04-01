@@ -333,7 +333,6 @@ function Home() {
 
                     <div className="brand-track">
 
-                        {/* first set */}
                         <div className="brand-item">
                             <img src={brand1} alt="" />
                         </div>

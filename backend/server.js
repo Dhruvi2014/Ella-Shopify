@@ -18,6 +18,8 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/shop", shopRoutes);
+app.use("/api/about", require("./routes/aboutRoutes"));
+
 
 app.get('/', (req, res) => {
     res.send('API is running...');

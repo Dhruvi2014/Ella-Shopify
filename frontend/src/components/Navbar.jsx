@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 
 import "../Navbar.css";
 import logo from "../assets/logo-black.png";
@@ -162,7 +163,10 @@ const Navbar = () => {
               <li className="nav-item dropdown">
                 <a className="nav-link" href="#">PAGES</a>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item">About Us</a></li>
+                  <li><Link to="/about" className="dropdown-item">
+    About Us
+  </Link>
+  </li>
                   <li><a className="dropdown-item">Brands</a></li>
                   <li><a className="dropdown-item">Contact Us</a></li>
                   <li><a className="dropdown-item">FAQs</a></li>

@@ -7,17 +7,18 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { ShopProvider } from "./context/ShopContext";
 import Footer from "./components/Footer";
+import About from "./pages/About";
 function App() {
   return (
     <ShopProvider>
       <Navbar />
-      <BrowserRouter>
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/collections/classic-all" element={<ShopAll />} />
             <Route path="/wishlist" element={<Wishlist />} />
+            <Route path="/about" element={<About />} />
+
         </Routes>
-      </BrowserRouter>
           <Footer/>
 
     </ShopProvider>
