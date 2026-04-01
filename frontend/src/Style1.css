@@ -5,7 +5,7 @@
   background-position: center;
 }
 
-.overlay {
+.about-hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -39,27 +39,27 @@
   object-fit: cover;
 }
 
-.overlay h1 {
+.about-hero-overlay h1 {
   font-size: 48px;
   font-weight: 700;
   margin: 20px 0;
 }
 
-.overlay .desc {
+.about-hero-overlay .desc {
   max-width: 750px;
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 25px;
 }
 
-.overlay button {
+.about-hero-overlay button {
   padding: 12px 30px;
   font-weight: 600;
   border-radius: 0;
 }
 
 @media (max-width: 768px) {
-  .overlay h1 {
+  .about-hero-overlay h1 {
     font-size: 28px;
   }
 
@@ -67,4 +67,137 @@
     width: 45px;
     height: 45px;
   }
+}
+
+.icon-style {
+  color: #333;
+}
+
+.learn-link {
+  text-decoration: underline;
+  font-size: 14px;
+  color: black;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.play-btn i {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .text-center {
+    text-align: center;
+  }
+}
+
+.contact-wrapper{
+background:#f5f5f5;
+padding:40px;
+}
+
+/* IMAGE */
+
+.contact-image{
+height:550px;
+background-image:url("https://images.unsplash.com/photo-1523381294911-8d3cead13475");
+background-size:cover;
+background-position:center;
+filter:brightness(80%);
+}
+
+/* RIGHT CONTENT */
+
+.contact-content{
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:60px;
+background:#f5f5f5;
+}
+
+.contact-title{
+font-weight:700;
+letter-spacing:1px;
+margin-bottom:30px;
+}
+
+.contact-info{
+border-left:1px solid #ddd;
+padding-left:25px;
+margin-bottom:30px;
+}
+
+.contact-info p{
+font-size:14px;
+margin-bottom:10px;
+color:#222;
+}
+
+.contact-info i{
+margin-right:10px;
+color:#000;
+}
+
+.address{
+margin-top:15px;
+line-height:1.6;
+}
+
+.hours-title{
+margin-top:20px;
+font-weight:600;
+}
+
+/* BUTTONS */
+
+.contact-buttons{
+display:flex;
+flex-direction:column;
+gap:15px;
+width:200px;
+}
+
+.btn-outline{
+background:none;
+border:1px solid #000;
+padding:12px;
+font-size:14px;
+letter-spacing:1px;
+transition:0.3s;
+}
+
+.btn-outline:hover{
+background:black;
+color:white;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+.contact-image{
+height:350px;
+}
+
+.contact-content{
+padding:40px;
+}
+
+.contact-buttons{
+width:100%;
+}
 }
