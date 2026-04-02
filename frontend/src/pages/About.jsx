@@ -35,6 +35,7 @@ function About() {
   }, []);
 
   if (!contact) return null;
+  
 
   return (
     <>

@@ -22,6 +22,7 @@ app.use("/api/shop", shopRoutes);
 app.use("/api/about", require("./routes/aboutRoutes"));
 app.use("/api/info", require("./routes/infoRoutes"));
 app.use("/api", contactRoutes);
+app.use("/api/brands", require("./routes/brandRoutes"));
 
 
 app.get('/', (req, res) => {

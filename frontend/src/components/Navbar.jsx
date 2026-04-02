@@ -7,6 +7,7 @@ import SidebarLogin from "./SidebarLogin";
 import CartSidebar from "./CartSidebar";
 import { AuthContext } from "../context/AuthContext";
 import { ShopContext } from "../context/ShopContext";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [megaOpen, setMegaOpen] = useState(false);
@@ -21,6 +22,9 @@ const Navbar = () => {
       alert("please logged in first");
     }
   };
+
+    const navigate = useNavigate();
+
 
   return (
     <>
@@ -164,10 +168,14 @@ const Navbar = () => {
                 <a className="nav-link" href="#">PAGES</a>
                 <ul className="dropdown-menu">
                   <li><Link to="/about" className="dropdown-item">
-    About Us
-  </Link>
-  </li>
-                  <li><a className="dropdown-item">Brands</a></li>
+                    About Us
+                  </Link>
+                  </li>
+                  <li>
+      <a className="dropdown-item" onClick={() => navigate("/brands")}>
+    Brands
+  </a>
+    </li>
                   <li><a className="dropdown-item">Contact Us</a></li>
                   <li><a className="dropdown-item">FAQs</a></li>
                   <li><a className="dropdown-item">Landing Pages</a></li>
@@ -191,50 +199,50 @@ const Navbar = () => {
             <div className="nav-icons d-flex align-items-center gap-3">
 
               {user ? (
-                <div 
-                  className="position-relative" 
-                  onMouseEnter={() => setProfileDropdown(true)} 
+                <div
+                  className="position-relative"
+                  onMouseEnter={() => setProfileDropdown(true)}
                   onMouseLeave={() => setProfileDropdown(false)}
                 >
-                    <div className="rounded-circle bg-dark text-white d-flex justify-content-center align-items-center" style={{ width: '32px', height: '32px', cursor: 'pointer', fontSize: '14px', fontWeight: 'bold' }}>
-                        {user.firstName ? user.firstName.charAt(0).toUpperCase() : 'U'}
+                  <div className="rounded-circle bg-dark text-white d-flex justify-content-center align-items-center" style={{ width: '32px', height: '32px', cursor: 'pointer', fontSize: '14px', fontWeight: 'bold' }}>
+                    {user.firstName ? user.firstName.charAt(0).toUpperCase() : 'U'}
+                  </div>
+                  {profileDropdown && (
+                    <div className="shadow bg-white p-3 position-absolute border" style={{ right: 0, top: '100%', minWidth: '200px', zIndex: 1000, borderRadius: '4px' }}>
+                      <div className="text-secondary mb-2" style={{ fontSize: '0.85rem', wordBreak: 'break-all' }}>
+                        {user.email}
+                      </div>
+                      <hr className="my-2" />
+                      <button onClick={logout} className="btn btn-sm btn-outline-danger w-100 rounded-0">Logout</button>
                     </div>
-                    {profileDropdown && (
-                        <div className="shadow bg-white p-3 position-absolute border" style={{ right: 0, top: '100%', minWidth: '200px', zIndex: 1000, borderRadius: '4px' }}>
-                            <div className="text-secondary mb-2" style={{ fontSize: '0.85rem', wordBreak: 'break-all' }}>
-                                {user.email}
-                            </div>
-                            <hr className="my-2" />
-                            <button onClick={logout} className="btn btn-sm btn-outline-danger w-100 rounded-0">Logout</button>
-                        </div>
-                    )}
+                  )}
                 </div>
               ) : (
                 <i className="far fa-user" onClick={() => setIsLoginOpen(true)} style={{ cursor: 'pointer', fontSize: '20px' }}></i>
               )}
               <i className="fas fa-search" style={{ cursor: 'pointer', fontSize: '20px' }}></i>
               <i className="fas fa-globe" style={{ cursor: 'pointer', fontSize: '20px' }}></i>
-              
-              <div 
-                className="position-relative" 
+
+              <div
+                className="position-relative"
                 onClick={() => {
-                  if(!user) { alert("please logged in first"); return; }
+                  if (!user) { alert("please logged in first"); return; }
                   window.location.href = "/wishlist";
-                }} 
+                }}
                 style={{ cursor: 'pointer' }}
               >
                 <i className="far fa-heart" style={{ fontSize: '20px' }}></i>
                 {wishlistCount > 0 && (
-                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style={{fontSize: '10px'}}>
+                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style={{ fontSize: '10px' }}>
                     {wishlistCount}
                   </span>
                 )}
               </div>
-              
+
               <div className="position-relative" onClick={() => setIsCartOpen(true)} style={{ cursor: 'pointer' }}>
                 <i className="fas fa-shopping-bag" style={{ fontSize: '20px' }}></i>
                 {cartCount > 0 && (
-                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style={{fontSize: '10px'}}>
+                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style={{ fontSize: '10px' }}>
                     {cartCount}
                   </span>
                 )}

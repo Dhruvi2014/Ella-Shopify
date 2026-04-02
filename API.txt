@@ -82,3 +82,9 @@ http://localhost:5000/api/info   -- POST
   }
 
 http://localhost:5000/api/info   -- GET
+
+http://localhost:5000/api/brands  -- GET
+
+http://localhost:5000/api/brands/D -- GET
+
+http://localhost:5000/api/brands/ALL -- GET

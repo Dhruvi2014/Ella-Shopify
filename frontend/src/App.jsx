@@ -8,6 +8,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import { ShopProvider } from "./context/ShopContext";
 import Footer from "./components/Footer";
 import About from "./pages/About";
+import Brands from "./pages/Brands";
+
 function App() {
   return (
     <ShopProvider>
@@ -17,6 +19,7 @@ function App() {
             <Route path="/collections/classic-all" element={<ShopAll />} />
             <Route path="/wishlist" element={<Wishlist />} />
             <Route path="/about" element={<About />} />
+            <Route path="/brands" element={<Brands />} />
 
         </Routes>
           <Footer/>
