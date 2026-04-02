@@ -109,7 +109,6 @@
   padding: 40px;
 }
 
-/* IMAGE */
 
 .contact-image {
   height: 550px;
@@ -119,7 +118,6 @@
   filter: brightness(80%);
 }
 
-/* RIGHT CONTENT */
 
 .contact-content {
   display: flex;
@@ -162,8 +160,6 @@
   font-weight: 600;
 }
 
-/* BUTTONS */
-
 .contact-buttons {
   display: flex;
   flex-direction: column;
@@ -184,8 +180,6 @@
   background: black;
   color: white;
 }
-
-/* RESPONSIVE */
 
 @media(max-width:992px) {
 
