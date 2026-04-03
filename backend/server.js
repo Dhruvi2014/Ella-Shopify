@@ -6,6 +6,7 @@ const authRoutes = require('./routes/authRoutes');
 const productRoutes = require("./routes/productRoutes");
 const shopRoutes = require("./routes/shopRoutes");
 const contactRoutes = require("./routes/contactRoutes");
+const contactusRoutes = require("./routes/contactusRoutes");
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.use("/api/about", require("./routes/aboutRoutes"));
 app.use("/api/info", require("./routes/infoRoutes"));
 app.use("/api", contactRoutes);
 app.use("/api/brands", require("./routes/brandRoutes"));
+app.use("/api/contactus",contactusRoutes);
 
 
 app.get('/', (req, res) => {

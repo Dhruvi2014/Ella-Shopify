@@ -23,7 +23,7 @@ const Navbar = () => {
     }
   };
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
 
   return (
@@ -172,11 +172,13 @@ const Navbar = () => {
                   </Link>
                   </li>
                   <li>
-      <a className="dropdown-item" onClick={() => navigate("/brands")}>
-    Brands
-  </a>
-    </li>
-                  <li><a className="dropdown-item">Contact Us</a></li>
+                    <a className="dropdown-item" onClick={() => navigate("/brands")}>
+                      Brands
+                    </a>
+                  </li>
+                  <li><Link className="dropdown-item" to="/contactus">
+Contact Us
+</Link></li>
                   <li><a className="dropdown-item">FAQs</a></li>
                   <li><a className="dropdown-item">Landing Pages</a></li>
                   <li><a className="dropdown-item">Lookbook</a></li>
