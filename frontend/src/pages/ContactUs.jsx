@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../Style1.css";
-
+import bg from "../assets/bg.jpg";
 const ContactUs = () => {
 
     const [formData, setFormData] = useState({
@@ -49,8 +49,31 @@ const ContactUs = () => {
             alert("Unauthorized. Please login again.");
         }
     };
+
     return (
         <>
+            <section
+                className="contact-hero"
+                style={{ backgroundImage: `url(${bg})` }}
+            >
+                <div className="hero-overlay"></div>
+
+                <div className="hero-inner">
+
+                    <span>Home</span>
+                    <span className="divider">›</span>
+                    <span>Contact Us</span>
+
+                    <h1>CONTACT US</h1>
+
+                    <p>
+                        We create timeless fashion and interiors that blend elegance,
+                        comfort and individuality — inspiring a lifestyle that feels truly yours.
+                    </p>
+
+                </div>
+            </section>
+
 
             <div className="contact-container">
 
@@ -148,6 +171,56 @@ const ContactUs = () => {
 
                 </div>
 
+            </div>
+
+            <div className="near-you-section">
+
+                <div className="container text-center py-5">
+                    <h2 className="near-title">Near you</h2>
+                    <p className="near-desc">
+                        We have 06 stores throughout “Country” and more in works.
+                        Complete the search details below to find a Ella store near you.
+                    </p>
+
+                    <button className="btn find-btn">FIND A STORE</button>
+                </div>
+
+                <div className="map-container">
+
+                    <iframe
+                        title="map"
+                        src="https://www.google.com/maps?q=10.8015,106.7106&z=15&output=embed"
+                        loading="lazy"
+                    ></iframe>
+
+                    <div className="map-card shadow">
+                        <h6>758, 35 Vietnam</h6>
+                        <p>
+                            758, 35 Vietnam,<br />
+                            Phuong 25, Than,<br />
+                            Min ho
+                        </p>
+
+                        <div className="map-icons">
+                            <a
+                                href="https://www.google.com/maps?q=10.8015,106.7106"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <i className="fa-solid fa-location-dot"></i>
+                            </a>
+
+                            <a
+                                href="https://www.google.com/maps/dir/?api=1&destination=10.8015,106.7106"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <i className="fa-solid fa-diamond-turn-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
         </>
