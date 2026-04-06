@@ -27,6 +27,7 @@ app.use("/api", contactRoutes);
 app.use("/api/brands", require("./routes/brandRoutes"));
 app.use("/api/contactus",contactusRoutes);
 app.use("/api", faqRoutes);
+app.use("/api/lookbook", require("./routes/lookbookRoutes"));
 
 
 app.get('/', (req, res) => {

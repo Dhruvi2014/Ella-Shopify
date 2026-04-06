@@ -180,7 +180,11 @@ const Navbar = () => {
                   </Link></li>
                   <li><a className="dropdown-item" href="/faq">FAQs</a></li>
                   <li><a className="dropdown-item">Landing Pages</a></li>
-                  <li><a className="dropdown-item">Lookbook</a></li>
+                  <li>
+                    <a className="dropdown-item" href="/lookbook">
+                      Lookbook
+                    </a>
+                  </li>
                   <li><a className="dropdown-item">Wish list</a></li>
                 </ul>
               </li>
