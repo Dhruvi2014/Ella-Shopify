@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import About from "./pages/About";
 import Brands from "./pages/Brands";
 import ContactUs from "./pages/ContactUs";
+import Faq from "./pages/Faq";
 function App() {
   return (
     <ShopProvider>
@@ -21,6 +22,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/brands" element={<Brands />} />
             <Route path="/contactus" element={<ContactUs />} />
+            <Route path="/faq" element={<Faq />} />
 
         </Routes>
           <Footer/>

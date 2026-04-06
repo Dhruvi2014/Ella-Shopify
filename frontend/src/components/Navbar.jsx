@@ -177,9 +177,9 @@ const Navbar = () => {
                     </a>
                   </li>
                   <li><Link className="dropdown-item" to="/contactus">
-Contact Us
-</Link></li>
-                  <li><a className="dropdown-item">FAQs</a></li>
+                    Contact Us
+                  </Link></li>
+                  <li><a className="dropdown-item" href="/faq">FAQs</a></li>
                   <li><a className="dropdown-item">Landing Pages</a></li>
                   <li><a className="dropdown-item">Lookbook</a></li>
                   <li><a className="dropdown-item">Wish list</a></li>

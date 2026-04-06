@@ -152,8 +152,8 @@ const ContactUs = () => {
 
                         <button className="message-btn">MESSAGE US</button>
 
-                        <p><i class="fa-solid fa-comment-dots"></i> TEXT: 091-123-ELLA</p>
-                        <p><i class="fa-solid fa-envelope"></i> email@domain.com</p>
+                        <p><i className="fa-solid fa-comment-dots"></i> TEXT: 091-123-ELLA</p>
+                        <p><i className="fa-solid fa-envelope"></i> email@domain.com</p>
 
                         <p>
                             685 Market Street<br />

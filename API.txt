@@ -104,3 +104,13 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzYyNDM1OWRjYjJmYmI3YTlmYzYxMyI
 
 http://localhost:5000/api/contactus  -- GET
 
+http://localhost:5000/api/faqs  -- POST
+
+{
+"question":"Can I have multi level menu?",
+"answer":"Yes, the theme supports multi-level dropdown navigation menus."
+}
+
+http://localhost:5000/api/faqs  -- GET
+
+
