@@ -25,7 +25,6 @@ const Navbar = () => {
 
   const navigate = useNavigate();
 
-
   return (
     <>
       <div className="topbar">
