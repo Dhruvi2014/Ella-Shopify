@@ -179,7 +179,11 @@ const Navbar = () => {
                     Contact Us
                   </Link></li>
                   <li><a className="dropdown-item" href="/faq">FAQs</a></li>
-                  <li><a className="dropdown-item">Landing Pages</a></li>
+                  <li>
+<a className="dropdown-item" href="/landing">
+Landing Pages
+</a>
+</li> 
                   <li>
                     <a className="dropdown-item" href="/lookbook">
                       Lookbook

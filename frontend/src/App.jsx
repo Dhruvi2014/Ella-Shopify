@@ -12,6 +12,7 @@ import Brands from "./pages/Brands";
 import ContactUs from "./pages/ContactUs";
 import Faq from "./pages/Faq";
 import Lookbook from "./pages/Lookbook";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="/faq" element={<Faq />} />
         <Route path="/lookbook" element={<Lookbook />} />
-
+<Route path="/landing" element={<LandingPage />} />
         </Routes>
           <Footer/>
 

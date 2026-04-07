@@ -113,4 +113,26 @@ http://localhost:5000/api/faqs  -- POST
 
 http://localhost:5000/api/faqs  -- GET
 
+http://localhost:5000/api/landing-products -- POST
+
+{
+  "brand": "LACOSTE",
+  "name": "(Product 14) Sample - Men Clothing And Accessory For Sale",
+  "price": "Rs. 8,500.00 INR"
+ }
+
+http://localhost:5000/api/landing-products -- GET
+
+http://localhost:5000/api/men-items -- POST(imgs should be public/assets folder)
+
+{
+  "title": "Sample - Formal Suit Collection",
+  "brand": "PUMA",
+  "price": 7200,
+  "oldPrice": 9000,
+  "image": "men4.jpg",
+  "badge": "SALE"
+}
+
+
 

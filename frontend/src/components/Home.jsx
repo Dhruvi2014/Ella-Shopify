@@ -87,20 +87,20 @@ function Home() {
 
     return (
         <>
-            <section className="hero">
+            <section className="hero1">
 
-                <div className="hero-content">
+                <div className="hero-content1">
                     <h1>
                         TIMELESS STYLE FOR <br />
                         MODERN LIVES
                     </h1>
 
-                    <button className="hero-btn btn btn-dark px-4 py-2" onClick={handleShopAll}>
+                    <button className="hero-btn1 btn btn-dark px-4 py-2" onClick={handleShopAll}>
                         SHOP ALL PRODUCTS
                     </button>
                 </div>
 
-                <div className="hero-img">
+                <div className="hero-img1">
                     <img src={heroImg} alt="fashion" />
                 </div>
 
