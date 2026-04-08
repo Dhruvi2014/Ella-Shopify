@@ -19,7 +19,6 @@ function About() {
   }, []);
 
   
-
   const heroImage = data.bannerImage || "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80";
   const authorImage = data.authorImage || "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80";
 

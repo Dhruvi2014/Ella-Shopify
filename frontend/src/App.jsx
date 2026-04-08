@@ -13,7 +13,7 @@ import ContactUs from "./pages/ContactUs";
 import Faq from "./pages/Faq";
 import Lookbook from "./pages/Lookbook";
 import LandingPage from "./pages/LandingPage";
-
+import Blog from "./pages/Blog";
 function App() {
   return (
     <ShopProvider>
@@ -28,6 +28,7 @@ function App() {
             <Route path="/faq" element={<Faq />} />
         <Route path="/lookbook" element={<Lookbook />} />
 <Route path="/landing" element={<LandingPage />} />
+<Route path="/blog" element={<Blog />} />
         </Routes>
           <Footer/>
 

@@ -10,6 +10,8 @@ const contactusRoutes = require("./routes/contactusRoutes");
 const faqRoutes = require("./routes/faqRoutes");
 const landingRoutes = require("./routes/landingProductRoutes");
 const menItemRoutes = require("./routes/menItemRoutes");
+const blogArticleRoutes = require("./routes/blogArticleRoutes");
+const featuredProductRoutes = require("./routes/featuredProductRoutes");
 
 dotenv.config();
 
@@ -32,6 +34,8 @@ app.use("/api", faqRoutes);
 app.use("/api/lookbook", require("./routes/lookbookRoutes"));
 app.use("/api",landingRoutes);
 app.use("/api/men-items", menItemRoutes);
+app.use("/api",blogArticleRoutes);
+app.use("/api",featuredProductRoutes);
 
 app.get('/', (req, res) => {
     res.send('API is running...');

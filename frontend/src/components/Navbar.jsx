@@ -127,7 +127,7 @@ const Navbar = () => {
                         <li>Multiple Languages</li>
                         <li>Ask An Expert <span className="tag hot">Hot</span></li>
                         <li>Shipping Thresholds</li>
-                        <li>Login Popup</li>
+                        <li>Login Popup</li>  
                         <li>Image Resize</li>
                         <li>Sticky Header</li>
                         <li>Marquee Function</li>
@@ -153,7 +153,7 @@ const Navbar = () => {
               </li>
 
               <li className="nav-item dropdown">
-                <a className="nav-link" href="#">BLOG</a>
+                <Link className="nav-link" to="/blog">BLOG</Link>
                 <ul className="dropdown-menu">
                   <li><a className="dropdown-item">Blog Classic</a></li>
                   <li><a className="dropdown-item">Blog Simple</a></li>

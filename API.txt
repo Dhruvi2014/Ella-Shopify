@@ -134,5 +134,26 @@ http://localhost:5000/api/men-items -- POST(imgs should be public/assets folder)
   "badge": "SALE"
 }
 
+http://localhost:5000/api/blog-articles  -- POST
+
+{
+"title":"Commodo De Quis Magna Cosmo Delos",
+"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+"image":"blog1.jpg",
+"date":"Aug 21, 2025",
+"author":"Halo Themes"
+}
+
+http://localhost:5000/api/blog-articles   -- GET
+
+http://localhost:5000/api/featured-products  -- POST
+
+{
+"brand":"Ravel Works",
+"name":"Contrast Stitch Utility Jacket",
+"price":"15900",
+"image":"img7.webp"
+} 
+
 
 

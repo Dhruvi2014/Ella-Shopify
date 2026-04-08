@@ -277,6 +277,39 @@ function LandingPage() {
                 </div>
             </div>
 
+            <section className="about-section text-center">
+                <div className="container">
+                    <h2 className="about-title">ABOUT ELLA</h2>
+
+                    <p className="about-description">
+                        Pellentesque sit amet porta purus. Aliquam quis elementum velit. Donec ipsum mi,
+                        auctor nec erat eu, consequat semper justo. Nulla eros velit, semper eu mollis id,
+                        efficitur consectetur est. Vestibulum lacus ex, facilisis sit amet mauris sit amet,
+                        tempus cursus felis. Curabitur nec luctus lorem, at vehicula enim.
+                    </p>
+
+                    <div className="row mt-5">
+                        <div className="col-md-4 col-sm-12 about-box">
+                            <i className="fa-regular fa-envelope about-icon"></i>
+                            <h5>Email Us</h5>
+                            <a href="#" className="about-link">Submit Form</a>
+                        </div>
+
+                        <div className="col-md-4 col-sm-12 about-box">
+                            <i className="fa-solid fa-phone about-icon"></i>
+                            <h5>Call Us</h5>
+                            <a href="#" className="about-link">Learn More</a>
+                        </div>
+
+                        <div className="col-md-4 col-sm-12 about-box">
+                            <i className="fa-regular fa-comments about-icon"></i>
+                            <h5>Live Chat</h5>
+                            <a href="#" className="about-link">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
         </>
 
