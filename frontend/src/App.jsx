@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import ShopAll from "./pages/ShopAll";
@@ -14,10 +14,14 @@ import Faq from "./pages/Faq";
 import Lookbook from "./pages/Lookbook";
 import LandingPage from "./pages/LandingPage";
 import Blog from "./pages/Blog";
+import AdminDashboard from "./pages/AdminDashboard";
 function App() {
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith('/admin');
+
   return (
     <ShopProvider>
-      <Navbar />
+      {!isAdminRoute && <Navbar />}
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/collections/classic-all" element={<ShopAll />} />
@@ -29,9 +33,9 @@ function App() {
         <Route path="/lookbook" element={<Lookbook />} />
 <Route path="/landing" element={<LandingPage />} />
 <Route path="/blog" element={<Blog />} />
+            <Route path="/admin/*" element={<AdminDashboard />} />
         </Routes>
-          <Footer/>
-
+        {!isAdminRoute && <Footer/>}
     </ShopProvider>
 
   );

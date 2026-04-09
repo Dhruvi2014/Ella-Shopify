@@ -23,7 +23,7 @@ function About() {
   const authorImage = data.authorImage || "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80";
 
 
-   const [contact, setContact] = useState(null);
+  const [contact, setContact] = useState(null);
 
   useEffect(() => {
     axios.get("http://localhost:5000/api/contact-info")
@@ -119,12 +119,10 @@ function About() {
 
       <div className="row">
 
-        {/* Left Image */}
         <div className="col-lg-7 p-0">
           <div className="contact-image"></div>
         </div>
 
-        {/* Right Content */}
         <div className="col-lg-5 contact-content">
 
           <h2 className="contact-title">CONTACT US</h2>

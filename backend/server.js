@@ -36,6 +36,7 @@ app.use("/api",landingRoutes);
 app.use("/api/men-items", menItemRoutes);
 app.use("/api",blogArticleRoutes);
 app.use("/api",featuredProductRoutes);
+app.use("/api/admin", require("./routes/adminRoutes"));
 
 app.get('/', (req, res) => {
     res.send('API is running...');

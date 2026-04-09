@@ -155,5 +155,21 @@ http://localhost:5000/api/featured-products  -- POST
 "image":"img7.webp"
 } 
 
+http://localhost:5000/api/featured-products -- GET
 
+http://localhost:5000/api/auth/register  -- POST
+
+{
+    "firstName": "Admin",
+    "email": "admin@gmail.com",
+    "password": "admin"
+}
+
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDc0NGFiZTk0OWRhNGIyYjhiZTQ0MCIsImlhdCI6MTc3NTcxNTUwMCwiZXhwIjoxNzc4MzA3NTAwfQ.M9l6BnHo8JW6kOzgzNva31pJ2dGV6Gw_s2I4_Vx0lRQ"
+
+http://localhost:5000/api/admin/lookbook  -- GET
+
+http://localhost:5000/api/admin/product  -- GET
+
+http://localhost:5000/api/admin/user  -- GET
 
